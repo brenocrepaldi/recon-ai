@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Product Details</title>
+		<link rel="stylesheet" href="../static/css/filter.css" />
+		<link rel="stylesheet" href="../static/css/recommend.css" />
+		<link rel="icon" href="/static/assets/Logo.png" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="background">
+			<header class="header">
+				<a href="/">
+					<img
+						class="img"
+						src="/static/assets/header.png"
+						alt="Profile Image"
+					/>
+				</a>
+			</header>
+			<div class="content">
+				<div class="container">
+					<h1>Product Details</h1>
+					<img src="{{ image }}" alt="Product Photo" />
+					<div class="product-details">
+						<p><b>ID:</b> {{ id }}</p>
+						<p><b>Title:</b> {{ title }}</p>
+						<p><b>Color:</b> {{ color }}</p>
+						<p><b>Rating:</b> {{ rating }} stars</p>
+						<p><b>Price:</b> $ {{ price }}</p>
+					</div>
+					<a href="/filter-products" class="btn-back">Back</a>
+				</div>
+			</div>
+			<h1 class="rel">Related Products:</h1>
+			<div
+				class="item-show"
+				id="recommendations-container"
+				data-recommendations="{{ recommendations }}"
+			>
+				<ul2 id="recommendations"> </ul2>
+			</div>
+		</div>
+		<img class="wave" src="/static/assets/wave.png" />
+		<div id="loading" class="loading"></div>
+		<h4>Click on products to see recommendations!</h4>
+		<script src="../static/javascript/index.js"></script>
+	</body>
+</html>

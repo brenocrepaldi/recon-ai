@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Recommendation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/static/css/filter.css" />
+		<link rel="icon" href="/static/assets/Logo.png" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body>
+		<div class="background">
+			<header class="header">
+				<a href="/">
+					<img
+						class="img"
+						src="/static/assets/header.png"
+						alt="Profile image"
+					/>
+				</a>
+			</header>
+
+			<div class="content">
+				<form
+					class="rectangle"
+					id="form"
+					method="post"
+					onsubmit="validateForm(); return false;"
+				>
+					<h1>Categories</h1>
+					<details class="custom-select">
+						<summary
+							id="dropdownSummary"
+							class="radios"
+							onclick="toggleDropdown('dropdown2')"
+						>
+							Colors
+						</summary>
+
+						<ul class="list" id="dropdown2">
+							<li onclick="changeColor('Navyblue')">Navy Blue</li>
+							<li onclick="changeColor('Yellow')">Yellow</li>
+							<li onclick="changeColor('Red')">Red</li>
+							<li onclick="changeColor('White')">White</li>
+							<li onclick="changeColor('Black')">Black</li>
+							<li onclick="changeColor('Blue')">Blue</li>
+							<li onclick="changeColor('Gray')">Gray</li>
+							<li onclick="changeColor('Green')">Green</li>
+							<li onclick="changeColor('Pink')">Pink</li>
+						</ul>
+					</details>
+
+					<div class="form-group">
+						<label class="lname" for="min-price">Minimum Price:</label>
+						<div class="input-with-symbol">
+							<span class="dollar-symbol">$</span>
+							<input
+								class="label2"
+								type="number"
+								min="0"
+								id="min-price"
+								name="min-price"
+								value="0"
+								required
+							/>
+						</div>
+					</div>
+					<div class="space"></div>
+					<div class="form-group">
+						<label class="lname" for="max-price">Maximum Price:</label>
+						<div class="input-with-symbol">
+							<span class="dollar-symbol">$</span>
+							<input
+								class="label2"
+								type="number"
+								min="0"
+								id="max-price"
+								name="max-price"
+								value="100"
+								required
+							/>
+						</div>
+					</div>
+
+					<button class="btn" type="submit">GENERATE</button>
+					<input type="hidden" id="selectedColor" name="color" />
+				</form>
+
+				<div class="item-show" id="recommendations-container">
+					<ul2 id="recommendations"></ul2>
+				</div>
+			</div>
+		</div>
+		<img class="wave" src="/static/assets/wave.png" />
+		<div id="loading" class="loading"></div>
+		<h4>Click on products to see recommendations!</h4>
+		<script src="/static/javascript/index.js"></script>
+	</body>
+</html>

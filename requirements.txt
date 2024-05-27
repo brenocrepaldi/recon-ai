@@ -1,0 +1,10 @@
+# Project Dependencies for Flask Product Recommendation
+
+# Flask: Web Framework
+Flask==3.0.3
+
+# Pandas: Data Manipulation Library
+pandas==2.2.2
+
+# Scikit-learn: Machine Learning Library
+scikit-learn==1.5.0
