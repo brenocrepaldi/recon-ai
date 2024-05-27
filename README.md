@@ -20,8 +20,8 @@ This project is a web application developed with Flask for product recommendatio
 ## Installation
 
 1. **Clone the repository:**  
-   `git clone <repository-url>`  
-   `cd recon-ia-system`
+   `git clone https://github.com/brenocrepaldi/recon-ia-recommendation-system`  
+   `cd recon-ia-recommendation-system`
 
 2. **Create and activate a virtual environment:**  
    `python3 -m venv venv`  
